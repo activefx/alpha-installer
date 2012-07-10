@@ -1,9 +1,10 @@
-# Uncomment to
+# Uncomment to check test coverage
 # require 'simplecov'
 # SimpleCov.start
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
+require 'pry'
 require 'rspec'
 require 'webmock/rspec'
 require 'vcr'
