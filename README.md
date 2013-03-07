@@ -1,24 +1,10 @@
-# Beta
+# Alpha Installer
 
-Beta is not an actual gem. It is an example gem setup with my most commonly used tools, and was
-generated from a combination of jeweler and bundler. The sample gem includes rspec, guard, pry,
-vcr, yard, simplecov and more.
-
-TODO: Write a gem description
+Alpha Installer is a command line application for automatic configuration and deployment of the Alpha application.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'beta'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install beta
+    $ gem install alpha-installer
 
 ## Usage
 

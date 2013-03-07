@@ -12,15 +12,15 @@ end
 require 'rake'
 
 require 'jeweler'
-require './lib/beta/version.rb'
+require './lib/alpha_installer/version.rb'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "beta"
-  gem.version = Beta::VERSION
-  gem.homepage = "http://github.com/activefx/beta"
+  gem.name = "alpha-installer"
+  gem.version = AlphaInstaller::VERSION
+  gem.homepage = "http://github.com/activefx/alpha-installer"
   gem.license = "MIT"
-  gem.summary = %Q{one-line summary of your gem}
-  gem.description = %Q{longer description of your gem}
+  gem.summary = %Q{Alpha Installer is a command line application for automatic configuration and deployment of the Alpha application.}
+  gem.description = %Q{Alpha Installer is a command line application for automatic configuration and deployment of the Alpha application.}
   gem.email = "mattsolt@gmail.com"
   gem.authors = ["Matthew Solt"]
   # dependencies defined in Gemfile

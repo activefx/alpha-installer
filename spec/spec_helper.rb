@@ -8,7 +8,7 @@ require 'pry'
 require 'rspec'
 require 'webmock/rspec'
 require 'vcr'
-require 'beta'
+require 'alpha-installer'
 
 # Place sensitive gem configuration files in spec/configuration.yml and
 # ensure that file is included in .gitignore to keep constants such as passwords
