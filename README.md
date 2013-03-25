@@ -1,3 +1,5 @@
+# NOT WORKING YET, DO NOT USE
+
 # Alpha Installer
 
 Alpha Installer is a command line application for automatic configuration and deployment of the Alpha application.
