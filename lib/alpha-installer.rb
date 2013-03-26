@@ -11,7 +11,7 @@ module AlphaInstaller
     attr_accessor :app_name, :api_key, :mailchimp_api_key, :s3_id, :s3_key, :repo, :addons, :workers, :account
 
     DEFAULT_ADDONS = [ 'mongolab', 'logentries', 'newrelic', 'mandrill' ]
-    OPTIONAL_ADDONS = [ 'openredis', 'exceptional' ]
+    OPTIONAL_ADDONS = [ 'redistogo', 'exceptional' ]
     DEFAULT_REPO = 'git://github.com/activefx/alpha.git'
 
     # installer = AlphaInstaller::Base.new(app_name, { :api_key => heroku_api_key} )
@@ -181,7 +181,7 @@ module AlphaInstaller
     end
 
     def sidekiq_enabled?
-      app_includes_workers? && addons.include?('openredis')
+      app_includes_workers? && addons.include?('redistogo')
     end
 
     def app_includes_workers?
@@ -232,7 +232,6 @@ module AlphaInstaller
           vars << "#{key}=#{value}"
         end
         if sidekiq_enabled?
-          vars << "OPENREDIS_DEV_URL=#{openredis_dev_url}"
           vars << "QUEUE=*"
         end
         if mailchimp_enabled?
@@ -267,10 +266,6 @@ module AlphaInstaller
 
     def mailchimp_enabled?
       mailchimp_api_key
-    end
-
-    def openredis_dev_url
-      config_var("OPENREDIS_URL").gsub(/(?<=@).+/, "proxy.openredis.com:10868")
     end
 
   end
