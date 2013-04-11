@@ -246,6 +246,10 @@ module AlphaInstaller
         vars << "HEROKU_APP_NAME=#{app_name}"
         vars << "HEROKU_API_KEY=#{api_key}"
         vars << "WEB_CONCURRENCY=3"
+        vars << "OOM_MAX=256"
+        vars << "OOM_MIN=192"
+        vars << "MAX_REQUEST_MIN=3072"
+        vars << "MAX_REQUEST_MAX=4096"
       end.join("\n")
     end
 
