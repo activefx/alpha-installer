@@ -245,6 +245,7 @@ module AlphaInstaller
         vars << "SECRET_TOKEN=#{new_secret_token}"
         vars << "HEROKU_APP_NAME=#{app_name}"
         vars << "HEROKU_API_KEY=#{api_key}"
+        vars << "WEB_CONCURRENCY=3"
       end.join("\n")
     end
 
